@@ -30,7 +30,7 @@ const Hero = () => {
                   <GraduationCap className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl font-bold">Firstmark Innovation School Of Technology</h2>
+                  <h2 className="font-heading text-2xl font-bold">Firstmark College of Management and Information Technology</h2>
                   <p className="text-white/80 text-sm">N.B.T.E Accredited Institution</p>
                   <div className="flex gap-1 mt-1">
                     <MapPin size={16} />

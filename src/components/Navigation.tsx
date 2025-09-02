@@ -32,7 +32,7 @@ const Navigation = () => {
             </div>
             <div>
               <span className="font-heading font-bold text-lg text-primary">FIRSTMARK</span>
-              <p className="text-xs text-muted-foreground">Innovation School Of Technology</p>
+              <p className="text-xs text-muted-foreground">College of management and information technology</p>
             </div>
           </motion.div>
 

@@ -19,45 +19,59 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const RATE_LIMIT_SECONDS = 60;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const lastSubmit = localStorage.getItem("lastSubmit");
+  const now = Date.now();
 
-    try {
-      // ✅ send via EmailJS
-      await emailjs.send(
-        "service_xv9dr7m", 
-        "template_i5g4a7v", 
-        formData,
-        "b-jZtj0n2-by2rkQy" 
-      );
+  if (lastSubmit && now - parseInt(lastSubmit) < RATE_LIMIT_SECONDS * 1000) {
+    toast({
+      title: "Slow down!",
+      description: `Please wait ${RATE_LIMIT_SECONDS} seconds before submitting again.`,
+      variant: "destructive",
+    });
+    return;
+  }
 
-      toast({
-        title: "Application Submitted Successfully!",
-        description:
-          "We'll contact you soon to confirm your registration.",
-      });
+  setIsSubmitting(true);
 
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        course: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      toast({
-        title: "Submission Failed",
-        description:
-          "There was an error sending your application. Please try again later or call the number in the contact section.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  try {
+    await emailjs.send(
+      "service_xv9dr7m",
+      "template_i5g4a7v",
+      formData,
+      "b-jZtj0n2-by2rkQy"
+    );
+
+    toast({
+      title: "Application Submitted Successfully!",
+      description: "We'll contact you soon to confirm your registration.",
+    });
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      course: "",
+      message: "",
+    });
+
+    // ✅ Save timestamp after successful submission
+    localStorage.setItem("lastSubmit", now.toString());
+
+  } catch (error) {
+    console.error("EmailJS error:", error);
+    toast({
+      title: "Submission Failed",
+      description: "There was an error sending your application. Please try again later.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

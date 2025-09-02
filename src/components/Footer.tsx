@@ -18,7 +18,7 @@ const Footer = () => {
                 <GraduationCap className="h-8 w-8" />
               </div>
               <div>
-                <h3 className="font-heading text-xl font-bold">Firstmark Innovation School Of Technology</h3>
+                <h3 className="font-heading text-xl font-bold">Firstmark College of Management and Information Technology</h3>
                 <p className="text-primary-foreground/80 text-sm">N.B.T.E Accredited</p>
               </div>
             </div>
