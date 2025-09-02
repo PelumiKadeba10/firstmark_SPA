@@ -62,7 +62,7 @@ const Footer = () => {
               <li className="text-primary-foreground/80">Home Automation & IoT</li>
               <li className="text-primary-foreground/80">Hardware Repair & Maintenance</li>
               <li className="text-primary-foreground/80">Social Media & Animation</li>
-              <li className="text-primary-foreground/80">Computer Networking</li>
+              <li className="text-primary-foreground/80">Computer Networking and System Security installation</li>
             </ul>
           </motion.div> */}
 

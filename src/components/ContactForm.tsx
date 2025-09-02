@@ -89,11 +89,11 @@ const handleSubmit = async (e: React.FormEvent) => {
       title: "Call Us",
       details: "+234 08109947499 / +234 803 550 8930"
     },
-    {
-      icon: Mail,
-      title: "Email Us",
-      details: "info@firstmarkcollege.edu.ng"
-    },
+    // {
+    //   icon: Mail,
+    //   title: "Email Us",
+    //   details: "info@firstmarkcollege.edu.ng"
+    // },
     {
       icon: Clock,
       title: "Office Hours",
@@ -168,7 +168,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="phone" className="font-medium">Phone Number *</Label>
+                      <Label htmlFor="phone" className="font-medium">Phone Number (WhatsApp Number) *</Label>
                       <Input
                         id="phone"
                         name="phone"
@@ -193,8 +193,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                         <option value="">Select a course</option>
                         <option value="home-automation">Home Automation & IoT Technologies</option>
                         <option value="hardware-repair">Computer Hardware Repair and Maintenance</option>
-                        <option value="social-media">Social Media and Animation Technology</option>
-                        <option value="networking">Computer Networking</option>
+                        <option value="social-media">Social media Communications and Animation Technology </option>
+                        <option value="networking">Computer Networking and System Security installation</option>
                       </select>
                     </div>
                   </div>

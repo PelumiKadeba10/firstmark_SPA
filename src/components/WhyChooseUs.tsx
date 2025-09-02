@@ -11,23 +11,23 @@ const WhyChooseUs = () => {
       color: "primary"
     },
     {
-      icon: HandHeart,
-      title: "Practical Hands-on Training", 
-      description: "Learn through real-world projects and hands-on experience with industry-standard equipment",
-      color: "secondary"
-    },
-    {
       icon: DollarSign,
       title: "Free Tuition Fees",
-      description: "Access quality education without financial barriers - completely free tuition for all students",
+      description: "FEDERAL GOVERNMENT FINANCED - Free Tuition fee",
       color: "primary"
     },
     {
       icon: Banknote,
       title: "Monthly Support Allowance",
-      description: "Receive monthly financial support to help you focus on your studies and practical training",
+      description: "Receive Federal Government monthly financial support to help you focus on your studies and practical training",
       color: "secondary"
-    }
+    },
+    {
+      icon: HandHeart,
+      title: "Practical Hands-on Training", 
+      description: "Learn through real-world projects and hands-on experience with industry-standard equipment",
+      color: "secondary"
+    },
   ];
 
   return (

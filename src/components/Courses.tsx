@@ -18,13 +18,13 @@ const Courses = () => {
     },
     {
       icon: Video,
-      title: "Social Media and Animation Technology",
+      title: "Social media Communications and Animation Technology",
       description: "Create engaging digital content with professional animation and social media strategies.",
       features: ["Digital Animation", "Video Editing", "Social Media Management", "Content Creation"]
     },
     {
       icon: Network,
-      title: "Computer Networking",
+      title: "Computer Networking and System Security installation",
       description: "Build and manage network infrastructures with enterprise-level networking skills.",
       features: ["Network Setup", "Security Protocols", "System Administration", "Troubleshooting"]
     }
