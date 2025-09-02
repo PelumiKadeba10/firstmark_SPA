@@ -30,8 +30,12 @@ const Hero = () => {
                   <GraduationCap className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-heading text-2xl font-bold">FIRSTMARK COLLEGE</h2>
+                  <h2 className="font-heading text-2xl font-bold">Firstmark Innovation School Of Technology</h2>
                   <p className="text-white/80 text-sm">N.B.T.E Accredited Institution</p>
+                  <div className="flex gap-1 mt-1">
+                    <MapPin size={16} />
+                    <p className="text-sm">Falana Street, Ajilosun, Ado-Ekiti, Ekiti State</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -76,25 +80,27 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col justify-center sm:flex-row gap-4"
             >
-              <Button 
-                size="lg" 
-                className="bg-secondary hover:bg-secondary-light text-secondary-foreground font-heading font-semibold text-lg px-8 py-6 shadow-secondary"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white w-full text-primary px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-white/90 transition-colors duration-200 shadow-lg"
+                onClick={() => { window.location.href = "#contact"; }}
               >
-                REGISTER NOW
-              </Button>
-              <Button 
+                APPLY NOW 
+              </motion.button>
+              {/* <Button 
                 variant="outline" 
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 font-heading font-semibold text-lg px-8 py-6"
               >
                 Learn More
-              </Button>
+              </Button> */}
             </motion.div>
 
             {/* Location */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
@@ -102,7 +108,7 @@ const Hero = () => {
             >
               <MapPin className="h-5 w-5" />
               <p className="text-sm">Falana Street, Ajilosun, Ado-Ekiti, Ekiti State</p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Content - Image */}
@@ -119,7 +125,7 @@ const Hero = () => {
                 className="bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-glow"
               >
                 <img 
-                  src="/lovable-uploads/9df9f9ec-73ab-4ceb-82ca-f1c4c401c441.png"
+                  src="/firstmarkadvert.jpg"
                   alt="Firstmark College ICT Training Program - Student working on computer hardware"
                   className="w-full rounded-2xl shadow-2xl"
                   loading="eager"

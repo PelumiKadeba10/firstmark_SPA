@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* College Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ const Footer = () => {
                 <GraduationCap className="h-8 w-8" />
               </div>
               <div>
-                <h3 className="font-heading text-xl font-bold">FIRSTMARK COLLEGE</h3>
+                <h3 className="font-heading text-xl font-bold">Firstmark Innovation School Of Technology</h3>
                 <p className="text-primary-foreground/80 text-sm">N.B.T.E Accredited</p>
               </div>
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Courses */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -64,7 +64,7 @@ const Footer = () => {
               <li className="text-primary-foreground/80">Social Media & Animation</li>
               <li className="text-primary-foreground/80">Computer Networking</li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           {/* Contact Info */}
           <motion.div
@@ -83,16 +83,22 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary-foreground/80" />
-                <p className="text-sm text-primary-foreground/80">
-                  +234 08109947499
+                <div>
+                  <p className="text-sm text-primary-foreground/80">
+                  0810 994 7499
                 </p>
+                <p className="text-sm text-primary-foreground/80">
+                  0803 550 8930
+                </p>
+                </div>
+                
               </div>
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary-foreground/80" />
                 <p className="text-sm text-primary-foreground/80">
                   info@firstmarkcollege.edu.ng
                 </p>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -107,10 +113,10 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/80 text-sm">
-              © 2024 Firstmark College of Management and Information Technology. All rights reserved.
+              © 2025 Firstmark Innovation School Of Technology. All rights reserved.
             </p>
             
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <p className="text-sm text-primary-foreground/80">Follow us:</p>
               <div className="flex gap-3">
                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
@@ -124,7 +130,7 @@ const Footer = () => {
                   </motion.a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

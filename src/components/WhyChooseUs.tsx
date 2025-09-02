@@ -99,6 +99,7 @@ const WhyChooseUs = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-primary px-8 py-4 rounded-xl font-heading font-bold text-lg hover:bg-white/90 transition-colors duration-200 shadow-lg"
+              onClick={() => { window.location.href = "#contact"; }}
             >
               APPLY NOW - LIMITED SLOTS!
             </motion.button>

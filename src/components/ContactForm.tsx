@@ -81,43 +81,7 @@ const ContactForm = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={info.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-card/50 backdrop-blur-sm border-2 hover:border-primary/30 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-gradient-primary p-3 rounded-xl text-primary-foreground">
-                        <info.icon className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                          {info.title}
-                        </h3>
-                        <p className="text-muted-foreground">
-                          {info.details}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-
+          
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -220,6 +184,43 @@ const ContactForm = () => {
                 </form>
               </CardContent>
             </Card>
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            {contactInfo.map((info, index) => (
+              <motion.div
+                key={info.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-card/50 backdrop-blur-sm border-2 hover:border-primary/30 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gradient-primary p-3 rounded-xl text-primary-foreground">
+                        <info.icon className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                          {info.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {info.details}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>

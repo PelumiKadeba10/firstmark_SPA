@@ -7,9 +7,9 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Courses", href: "#courses" },
+    // { name: "Home", href: "#home" },
     { name: "Why Choose Us", href: "#why-choose" },
+    { name: "Courses", href: "#courses" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -32,7 +32,7 @@ const Navigation = () => {
             </div>
             <div>
               <span className="font-heading font-bold text-lg text-primary">FIRSTMARK</span>
-              <p className="text-xs text-muted-foreground">College</p>
+              <p className="text-xs text-muted-foreground">Innovation School Of Technology</p>
             </div>
           </motion.div>
 
@@ -54,7 +54,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -63,7 +63,7 @@ const Navigation = () => {
             <Button className="bg-secondary hover:bg-secondary-light text-secondary-foreground font-heading font-semibold">
               Apply Now
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           {/* Mobile Menu Button */}
           <Button
@@ -96,11 +96,11 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="px-4 pt-2">
+              {/* <div className="px-4 pt-2">
                 <Button className="w-full bg-secondary hover:bg-secondary-light text-secondary-foreground font-heading font-semibold">
                   Apply Now
                 </Button>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         )}
