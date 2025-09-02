@@ -113,7 +113,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/80 text-sm">
-              © 2025 Firstmark Innovation School Of Technology. All rights reserved.
+              © 2025 Firstmark College of Management and Information Technology. All rights reserved.
             </p>
             
             {/* <div className="flex items-center gap-4">
