@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com"; 
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -22,18 +23,42 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Application Submitted Successfully!",
-      description: "We'll contact you within 24 hours to confirm your registration.",
-    });
-    
-    setFormData({ name: "", email: "", phone: "", course: "", message: "" });
-    setIsSubmitting(false);
+
+    try {
+      // ✅ send via EmailJS
+      await emailjs.send(
+        "service_xv9dr7m", 
+        "template_i5g4a7v", 
+        formData,
+        "b-jZtj0n2-by2rkQy" 
+      );
+
+      toast({
+        title: "Application Submitted Successfully!",
+        description:
+          "We'll contact you soon to confirm your registration.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        course: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast({
+        title: "Submission Failed",
+        description:
+          "There was an error sending your application. Please try again later or call the number in the contact section.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
